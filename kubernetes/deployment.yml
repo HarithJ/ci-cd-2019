@@ -1,0 +1,16 @@
+apiVersion: extensions/v1beta1
+kind: Deployment
+metadata:
+  name: create-pod
+spec:
+  template:
+    metadata:
+      labels:
+        app: create-pod
+    spec:
+      containers:
+        - name: create-pod
+          image: harithj/create-pod
+          imagePullPolicy: Always
+          command:
+            - ./create-pod
