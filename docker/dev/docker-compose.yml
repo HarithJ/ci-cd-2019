@@ -7,4 +7,5 @@ services:
       dockerfile: docker/dev/Dockerfile
     volumes:
       - ./../../app:/go
-    # entrypoint: /go/docker/dev/entrypoint.sh
+    ports:
+      - '8080:8080'

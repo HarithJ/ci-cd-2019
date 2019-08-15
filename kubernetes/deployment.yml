@@ -13,4 +13,6 @@ spec:
           image: harithj/create-pod
           imagePullPolicy: Always
           command:
-            - ./create-pod
+            - ./ci-cd-2019
+          ports:
+            - containerPort: 8080

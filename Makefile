@@ -8,6 +8,10 @@ start-build:
 start-nobuild:
 	@ docker-compose -f $(DOCKER_DEV_COMPOSE_FILE) run app /bin/ash
 
+test-prod:
+	@ docker build -f $(DOCKER_PROD_FILE) -t harithj/create-pod .
+	@ docker push harithj/create-pod
+
 production:
 	@ docker build -f $(DOCKER_PROD_FILE) -t gcr.io/apprenticeship-projects-1/pod-creation .
 	@ docker push gcr.io/apprenticeship-projects-1/pod-creation
