@@ -1,0 +1,18 @@
+apiVersion: extensions/v1beta1
+kind: Deployment
+metadata:
+  name: ci-cd-2019
+spec:
+  template:
+    metadata:
+      labels:
+        app: ci-cd-2019
+    spec:
+      containers:
+        - name: ci-cd-2019
+          image: harithj/ci-cd-2019
+          imagePullPolicy: Always
+          command:
+            - ci-cd-2019
+          ports:
+            - containerPort: 8080
