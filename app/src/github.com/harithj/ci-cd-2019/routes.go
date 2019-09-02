@@ -4,6 +4,8 @@ import (
     "net/http"
 
     "github.com/gorilla/mux"
+
+    "github.com/harithj/ci-cd-2019/github/webhook"
 )
 
 type Route struct {
@@ -37,9 +39,9 @@ var routes = Routes{
     Index,
   },
   Route{
-    "CreatePod",
-    "Get",
-    "/create-pod",
-    CreatePod,
+    "Payload",
+    "POST",
+    "/payload",
+    webhook.Payloadfunc,
   },
 }

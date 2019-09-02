@@ -1,18 +1,18 @@
 apiVersion: extensions/v1beta1
 kind: Deployment
 metadata:
-  name: create-pod
+  name: ci-cd-2019
 spec:
   template:
     metadata:
       labels:
-        app: create-pod
+        app: ci-cd-2019
     spec:
       containers:
-        - name: create-pod
-          image: harithj/create-pod
+        - name: ci-cd-2019
+          image: harithj/ci-cd-2019
           imagePullPolicy: Always
           command:
-            - ./ci-cd-2019
+            - ci-cd-2019
           ports:
             - containerPort: 8080
